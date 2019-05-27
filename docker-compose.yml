@@ -1,0 +1,17 @@
+version: "3.2"
+
+services:
+  api:
+    build: .
+    environment:
+      - PROJECT_ID=${GCP_PROJECT_ID}
+      - BUCKET_NAME=${GCP_BUCKET_NAME}
+      - BASE_DIR=/syncdir/
+      - INCLUDE_FILE_PATTERN
+    volumes:
+      - type: bind
+        source: ${GCP_KEY_FILE_FULL_PATH}
+        target: /keyfile
+      - type: bind
+        source: ${GCP_SYNC_DIRECTORY}
+        target: /syncdir

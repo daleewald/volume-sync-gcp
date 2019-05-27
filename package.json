@@ -1,0 +1,26 @@
+{
+  "name": "volume-sync-gcp",
+  "version": "1.0.0",
+  "description": "Synchronize a bind-mounted location to a GCP bucket.",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daleewald/volume-sync-gcp.git"
+  },
+  "author": "Dale Ewald <dale.ewald@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daleewald/volume-sync-gcp/issues"
+  },
+  "homepage": "https://github.com/daleewald/volume-sync-gcp#readme",
+  "dependencies": {
+    "@google-cloud/storage": "^2.5.0",
+    "node-watch": "^0.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
