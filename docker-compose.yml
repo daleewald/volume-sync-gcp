@@ -13,5 +13,5 @@ services:
         source: ${GCP_KEY_FILE_FULL_PATH}
         target: /keyfile
       - type: bind
-        source: ${GCP_SYNC_DIRECTORY}
+        source: ${MOUNT_SYNC_DIRECTORY}
         target: /syncdir
