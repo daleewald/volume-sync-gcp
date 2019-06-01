@@ -47,7 +47,7 @@ watch(BASE_DIR, { recursive: true }, function(evt, name) {
         bucket.upload( name, { destination: filename } ).then( ( file ) => {
             console.log( filename, 'Uploaded as generation ', file[0].metadata.generation);
         }).catch( ( err ) => {
-            console.warn( err );
+            console.warn( filename, err );
         });
     }
     if (evt === 'remove') {
@@ -57,7 +57,7 @@ watch(BASE_DIR, { recursive: true }, function(evt, name) {
                 file.delete().then( () => {
                     console.log('Deleted', filename, 'from', bucket.name);
                 }).catch( ( err ) => {
-                    console.warn( err );
+                    console.warn( filename, err );
                 });
             }
         });
